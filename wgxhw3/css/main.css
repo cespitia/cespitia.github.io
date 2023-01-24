@@ -20,7 +20,7 @@ ul li {
 body {
     font-family: Georgia, serif;
     padding: 0;
-    margin: 34px 0 0 0;
+    margin: 35px 0 0 0;
     text-align: center;
     color: #333333;
 }
@@ -50,22 +50,23 @@ a.current {
 
 /* Header */
 header {
-    margin:0 65px 0 69px;
-    border: .123em solid gray;
-    margin-bottom: 93px;
-    padding: 19px 18px 21px 21px;
+    margin:0 55px 0 59px;
+    border: 1.5px solid gray;
+    margin-bottom: 91px;
+    padding: 18px 18px 22px 21px;
     border-radius: 1px;
 }
 header h1 {
     margin: 0;
     font-size: 3.5em;
     font-weight: lighter;
-    text-shadow: 0 0 1.5px #000;
+    text-shadow: 0 0 1px #000;
 }
 
 /* Top navigation */
 #topnav {
-
+    position: relative;
+    left: -1px;
 }
 #topnav ul {
     margin-top: 7px;
@@ -74,9 +75,11 @@ header h1 {
     font-size: 13px;
     font-style: italic;
     display: inline;
-    margin:0 10px;
+    margin:0 9.8px;
     color: #909090;
     text-shadow: 0 .1px 1.2px #909090;
+    position: relative;
+    right: 1px;
 }
 #topnav a {
     font-weight: lighter;
@@ -141,7 +144,7 @@ h2 {
 
 /* Footer */
 footer {
-    margin-top: 35px;
+    margin-top: 32px;
 }
 footer p {
     font-size: .6em;
@@ -150,11 +153,11 @@ footer p {
 }
 footer ul {
     position:relative;
-    right: 3px;
+    right: 1px;
     margin-top: 26px;
 } 
 footer li {
-    margin: 0 6px;
+    margin: 0 7px;
     display: inline;
 }
 .facebook {
