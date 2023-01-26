@@ -3,12 +3,21 @@ Name:       Christopher Espitia
 Assignment: Homework 3
 Class:      CSCI 571
 Filename:   main.css
+Date:       01/25/2023
+NOTE:       I intentionally blurred some of the fonts via text-shadow in order 
+            to duplicate the provided images. The same goes for margins and 
+            padding with some relative positioning. This was done to match
+            the exact placement, pixel by pixel (as close as possible). 
+
+            Another note: The Home.png and Nature.png images did not match. 
+            The image dimensions were off and the elements did not align.
+            However, I used Home.png as the actual template for Nature instead
+            of creating two different layouts for each page.
 ******************************************************************************/
 
 /* Global styles */
 table, th, td {
     border: 0;
-    /*padding: 2.5px;*/
 }
 ul {
     margin: 0;
@@ -20,7 +29,7 @@ ul li {
 body {
     font-family: Georgia, serif;
     padding: 0;
-    margin: 35px 0 0 0;
+    margin: 34.5px 0 0 0;
     text-align: center;
     color: #333333;
 }
@@ -50,15 +59,15 @@ a.current {
 
 /* Header */
 header {
-    margin:0 55px 0 59px;
-    border: 1.5px solid gray;
+    margin:0 54.5px 0 59px;
+    border: 1.5px solid #777;
     margin-bottom: 91px;
-    padding: 18px 18px 22px 21px;
+    padding: 18.5px 18px 22px 21px;
     border-radius: 1px;
 }
 header h1 {
     margin: 0;
-    font-size: 3.5em;
+    font-size: 56px;
     font-weight: lighter;
     text-shadow: 0 0 1px #000;
 }
@@ -88,10 +97,11 @@ header h1 {
 
 h2 {
     text-align: left;
-    margin: -39px 0 5px 12px;
-    font-size: 29px;
+    margin: -41px 0 6px 15px;
+    font-size: 28px;
     font-weight: normal;
     text-shadow: 0 .1px 1.2px #555;
+    position: absolute;
 }
 
 /* Image table (as list) */
@@ -100,8 +110,8 @@ h2 {
 }
 /* Table of images */
 .image {
-    height: 375px;
-    width: 375px;
+    height: 374px;
+    width: 374px;
     background-position: center;
     background-size: cover;
 }
@@ -144,12 +154,16 @@ h2 {
 
 /* Footer */
 footer {
-    margin-top: 32px;
+    margin-top: 33.5px;
 }
 footer p {
-    font-size: .6em;
+    font-size: 9.6px;
     font-style: italic;
-    text-shadow: 0.1px 0.1px #383838;
+    text-shadow: 0.1px 0.1px 0.1px #383838;
+}
+footer p span {
+    position: relative;
+    top: 1px;
 }
 footer ul {
     position:relative;
@@ -161,12 +175,15 @@ footer li {
     display: inline;
 }
 .facebook {
-
+    position: relative;
+    top: 0.5px;
+    left: -0.5px;
 }
 .twitter {
     position: relative;
     bottom: 1px;
 }
 .instagram {
-
+    position: relative;
+    top: 0.5px;
 }
