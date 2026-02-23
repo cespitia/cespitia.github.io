@@ -81,14 +81,14 @@ defineProps<{
 .featured{
   border:1px solid rgba(255,255,255,0.16);
   background:
-    radial-gradient(900px 500px at 10% 0%, rgba(120,140,255,0.20), transparent 55%),
-    radial-gradient(700px 500px at 90% 20%, rgba(120,255,160,0.12), transparent 55%),
+    radial-gradient(
+      900px 500px at 15% 0%,
+      rgba(var(--accent-rgb),0.20),
+      transparent 55%
+    ),
     rgba(255,255,255,0.05);
   border-radius:18px;
   padding:18px;
-  display:grid;
-  grid-template-columns: 1.35fr 0.65fr;
-  gap:16px;
 }
 
 @media (max-width: 920px){

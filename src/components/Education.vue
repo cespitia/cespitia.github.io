@@ -32,6 +32,7 @@
   font-size:18px;
   margin-bottom:12px;
   opacity:0.9;
+  color: var(--accent);
 }
 
 .grid{

@@ -3,6 +3,15 @@
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   line-height: 1.4;
   font-weight: 400;
+  --accent-rgb: 120,150,255;        /* Soft Azure */
+  --accent: rgba(var(--accent-rgb),1);
+  --accent-soft: rgba(var(--accent-rgb),0.12);
+  --accent-border: rgba(var(--accent-rgb),0.35);
+  --accent-strong: rgba(var(--accent-rgb),0.6);
+
+  /* .NET Purple */
+  --dotnet-purple: #512BD4;
+  --dotnet-purple-hover: #5C37E6;
 
   color: rgba(255,255,255,0.92);
   background:

@@ -203,38 +203,43 @@ const filtered = computed(() => {
 .pill{
   padding:6px 12px;
   border-radius:999px;
-  border:1px solid rgba(255,255,255,0.16);
-  background: rgba(255,255,255,0.05);
+  border:1px solid var(--accent-border);
+  background: var(--accent-soft);
   font-size:12px;
-  opacity:0.9;
+  opacity:0.95;
 }
 
 .primary{
-  padding:10px 14px;
+  padding:10px 16px;
   border-radius:12px;
   text-decoration:none;
-  border:1px solid rgba(140,180,255,0.30);
-  color:inherit;
-  background: rgba(140,180,255,0.12);
+  border:none;
+  color:white;
+  background: var(--dotnet-purple);
+  font-weight:500;
   transition: all 0.2s ease;
 }
 
 .primary:hover{
-  background: rgba(140,180,255,0.20);
+  background: var(--dotnet-purple-hover);
+  transform: translateY(-1px);
 }
 
-.secondary {
-  padding:10px 14px;
+.secondary{
+  padding:10px 16px;
   border-radius:12px;
   text-decoration:none;
-  border:1px solid rgba(255,255,255,0.14);
-  color:inherit;
-  background:rgba(255,255,255,0.06);
-  transition:all 0.2s ease;
+  border:1px solid var(--dotnet-purple);
+  color: var(--dotnet-purple);
+  background: rgba(255,255,255,0.95);
+  font-weight:500;
+  transition: all 0.2s ease;
 }
 
 .secondary:hover{
-  background:rgba(255,255,255,0.12);
+  background: var(--dotnet-purple);
+  color: white;
+  transform: translateY(-1px);
 }
 
 /* Search Controls */
