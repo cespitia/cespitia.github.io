@@ -183,8 +183,21 @@ const filtered = computed(() => {
   gap:12px;
 }
 
-.primary,
-.secondary{
+.primary{
+  padding:10px 14px;
+  border-radius:12px;
+  text-decoration:none;
+  border:1px solid rgba(140,180,255,0.30);
+  color:inherit;
+  background: rgba(140,180,255,0.12);
+  transition: all 0.2s ease;
+}
+
+.primary:hover{
+  background: rgba(140,180,255,0.20);
+}
+
+.secondary {
   padding:10px 14px;
   border-radius:12px;
   text-decoration:none;
@@ -194,7 +207,6 @@ const filtered = computed(() => {
   transition:all 0.2s ease;
 }
 
-.primary:hover,
 .secondary:hover{
   background:rgba(255,255,255,0.12);
 }
