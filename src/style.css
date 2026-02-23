@@ -23,8 +23,20 @@ body{
   margin:0;
 }
 
+h1, h2, h3{
+  letter-spacing:-0.01em;
+}
+
 a{ color: inherit; }
+
+p{
+  margin:0;
+}
 
 code, pre{
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+::selection{
+  background: rgba(255,255,255,0.12);
 }
