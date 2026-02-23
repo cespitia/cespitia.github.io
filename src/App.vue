@@ -66,6 +66,16 @@ const filtered = computed(() => {
             Resume
           </a>
         </div>
+
+        <div class="heroPills">
+          <span class="pill">C# / .NET</span>
+          <span class="pill">MVC + Web APIs</span>
+          <span class="pill">Entity Framework</span>
+          <span class="pill">SQL Server</span>
+          <span class="pill">IIS + Azure</span>
+          <span class="pill">Secure SDLC</span>
+        </div>
+
       </div>
 
       <!-- Search Controls -->
@@ -181,6 +191,22 @@ const filtered = computed(() => {
 .cta{
   display:flex;
   gap:12px;
+}
+
+.heroPills{
+  margin-top:14px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.pill{
+  padding:6px 12px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.05);
+  font-size:12px;
+  opacity:0.9;
 }
 
 .primary{
