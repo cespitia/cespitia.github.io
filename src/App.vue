@@ -1,7 +1,14 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
+
 import FeaturedProject from "./components/FeaturedProject.vue";
+import EnterpriseHighlights from "./components/EnterpriseHighlights.vue";
 import ProjectCard from "./components/ProjectCard.vue";
+import EngineeringPhilosophy from "./components/EngineeringPhilosophy.vue";
+import Education from "./components/Education.vue";
+import Certifications from "./components/Certifications.vue";
+import SectionDivider from "./components/SectionDivider.vue";
+
 import { projects } from "./data/projects";
 
 const query = ref("");
@@ -9,15 +16,18 @@ const status = ref<"All" | "Planned" | "In Progress" | "MVP Done">("All");
 
 const filtered = computed(() => {
   const q = query.value.trim().toLowerCase();
-  return projects.filter(p => {
+
+  return projects.filter((p) => {
     const matchesText =
       !q ||
       p.title.toLowerCase().includes(q) ||
       p.subtitle.toLowerCase().includes(q) ||
       p.oneLiner.toLowerCase().includes(q) ||
-      p.tags.some(t => t.toLowerCase().includes(q));
+      p.tags.some((t) => t.toLowerCase().includes(q));
 
-    const matchesStatus = status.value === "All" ? true : p.status === status.value;
+    const matchesStatus =
+      status.value === "All" ? true : p.status === status.value;
+
     return matchesText && matchesStatus;
   });
 });
@@ -25,35 +35,47 @@ const filtered = computed(() => {
 
 <template>
   <div class="page">
+
+    <!-- HERO -->
     <header class="hero">
-      <div class="heroTop">
-        <div>
-          <h1 class="h1">Chris Espitia Portfolio</h1>
-            <p class="lead">
-              Associate Software Developer with enterprise experience across Secure SDLC,
-              database-driven applications, and Microsoft .NET ecosystems. Focused on building
-              maintainable, documented, production-ready systems that balance architecture,
-              security, and long-term supportability.
-            </p>
-        </div>
+      <div class="heroContent">
+        <h1 class="h1">Christopher Espitia Portfolio</h1>
+
+        <p class="lead">
+          Associate Software Developer with enterprise experience across Secure SDLC,
+          database-driven applications, and Microsoft .NET ecosystems.
+          Focused on building maintainable, documented, production-ready systems.
+        </p>
+
         <div class="cta">
-          <a class="primary" href="https://github.com/cespitia" target="_blank" rel="noreferrer">
+          <a
+            class="primary"
+            href="https://github.com/cespitia"
+            target="_blank"
+            rel="noreferrer"
+          >
             GitHub
           </a>
-          <a class="secondary" href="#" @click.prevent>
-            Resume (add link)
+
+          <a
+            class="secondary"
+            href="/resume/Christopher_Espitia_Associate_Developer_Resume.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            Resume
           </a>
         </div>
       </div>
 
+      <!-- Search Controls -->
       <div class="controls">
         <input
           class="input"
           v-model="query"
           placeholder="Search projects, tech, tags..."
-          aria-label="Search"
         />
-        <select class="select" v-model="status" aria-label="Filter by status">
+        <select class="select" v-model="status">
           <option>All</option>
           <option>Planned</option>
           <option>In Progress</option>
@@ -61,39 +83,65 @@ const filtered = computed(() => {
         </select>
       </div>
 
+      <!-- Featured Project -->
       <div class="featuredWrap">
         <FeaturedProject
           title="TransitHQ"
-          subtitle="Real-time transit intelligence for San Diego MTS"
-          description="Mobile-first rider experience backed by a gateway that normalizes upstream feeds, adds caching, and lays the groundwork for reliability scoring and analytics."
-          :stack="['React + TypeScript', 'Django REST', 'Redis', 'Postgres', 'GTFS + GTFS-Realtime']"
+          subtitle="Real-time transit intelligence platform"
+          description="Mobile-first rider experience backed by a gateway that normalizes upstream feeds, applies caching strategies, and lays the groundwork for reliability analytics."
+          :stack="['React + TypeScript', 'Django REST', 'Redis', 'Postgres']"
           architectureTitle="Architecture"
-          architectureLine="Frontend (React + TypeScript) → Backend API (Django REST) → Redis (real-time cache) + Postgres (static + history)"
+          architectureLine="React → Django REST API → Redis (real-time cache) + Postgres"
           :bullets="[
-            'Nearby stops, arrivals, live vehicles, and service alerts (MVP path)',
-            'Rate-limit friendly polling + caching to improve consistency',
-            'Foundation for headway analysis, confidence scoring, and reliability dashboards'
+            'Nearby stops and arrivals (MVP path)',
+            'Rate-limit friendly polling and caching',
+            'Foundation for reliability scoring and analytics'
           ]"
           :links="[
-            { label: 'GitHub Repo', url: 'https://github.com/cespitia/transit-hq' },
-            { label: 'README', url: 'https://github.com/cespitia/transit-hq#readme' }
+            { label: 'GitHub Repo', url: 'https://github.com/cespitia/transit-hq' }
           ]"
         />
-    </div>
-
+      </div>
     </header>
 
+    <!-- ENTERPRISE EXPERIENCE -->
+    <EnterpriseHighlights />
+
+    <SectionDivider />
+
+    <!-- PROJECTS GRID -->
     <main class="grid">
-      <ProjectCard v-for="p in filtered" :key="p.id" :project="p" />
+      <ProjectCard
+        v-for="p in filtered"
+        :key="p.id"
+        :project="p"
+      />
     </main>
 
+    <SectionDivider />
+
+    <!-- ENGINEERING PHILOSOPHY -->
+    <EngineeringPhilosophy />
+
+    <SectionDivider />
+
+    <!-- EDUCATION -->
+    <Education />
+
+    <SectionDivider />
+
+    <!-- CERTIFICATIONS -->
+    <Certifications />
+
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="footerInner">
         <span>Built with Vue + TypeScript.</span>
         <span class="sep">·</span>
-        <span>Update statuses, links, and screenshots as each MVP ships.</span>
+        <span>Enterprise-focused .NET & cloud-oriented development.</span>
       </div>
     </footer>
+
   </div>
 </template>
 
@@ -105,19 +153,16 @@ const filtered = computed(() => {
   margin:0 auto;
 }
 
+/* HERO */
 .hero{
   display:flex;
   flex-direction:column;
-  gap:16px;
-  margin-bottom:18px;
+  gap:18px;
+  margin-bottom:24px;
 }
 
-.heroTop{
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-  gap:18px;
-  flex-wrap:wrap;
+.heroContent{
+  max-width:820px;
 }
 
 .h1{
@@ -125,78 +170,89 @@ const filtered = computed(() => {
   font-size:34px;
   letter-spacing:-0.02em;
 }
+
 .lead{
-  margin:8px 0 0;
-  max-width:820px;
-  opacity:0.86;
+  margin:12px 0 18px;
+  opacity:0.85;
   line-height:1.6;
 }
 
+/* CTA */
 .cta{
   display:flex;
-  gap:10px;
+  gap:12px;
 }
-.primary,.secondary{
+
+.primary,
+.secondary{
   padding:10px 14px;
   border-radius:12px;
   text-decoration:none;
   border:1px solid rgba(255,255,255,0.14);
-  color: inherit;
-  background: rgba(255,255,255,0.06);
-}
-.primary:hover,.secondary:hover{
-  background: rgba(255,255,255,0.10);
+  color:inherit;
+  background:rgba(255,255,255,0.06);
+  transition:all 0.2s ease;
 }
 
+.primary:hover,
+.secondary:hover{
+  background:rgba(255,255,255,0.12);
+}
+
+/* Search Controls */
 .controls{
   display:flex;
   gap:10px;
   flex-wrap:wrap;
 }
-.input,.select{
+
+.input,
+.select{
   border-radius:12px;
   border:1px solid rgba(255,255,255,0.14);
-  background: rgba(0,0,0,0.20);
-  color: inherit;
+  background:rgba(0,0,0,0.20);
+  color:inherit;
   padding:10px 12px;
-  outline:none;
-}
-.input{
-  flex: 1 1 320px;
-}
-.select{
-  flex: 0 0 180px;
 }
 
+.input{ flex:1 1 320px; }
+.select{ flex:0 0 180px; }
+
+/* Featured */
 .featuredWrap{
-  margin-top: 6px;
+  margin-top:6px;
 }
 
+/* Grid */
 .grid{
   display:grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap:14px;
-}
-.grid :deep(article.card){
-  grid-column: span 12;
+  grid-template-columns:repeat(12,1fr);
+  gap:16px;
+  margin-top:24px;
 }
 
-@media (min-width: 820px){
+.grid :deep(article.card){
+  grid-column:span 12;
+}
+
+@media (min-width:820px){
   .grid :deep(article.card){
-    grid-column: span 6;
+    grid-column:span 6;
   }
 }
 
+/* Footer */
 .footer{
-  margin-top:30px;
-  opacity:0.75;
+  margin-top:24px;
+  opacity:0.70;
   font-size:12px;
 }
+
 .footerInner{
   display:flex;
-  align-items:center;
   gap:8px;
   flex-wrap:wrap;
 }
+
 .sep{ opacity:0.6; }
 </style>
