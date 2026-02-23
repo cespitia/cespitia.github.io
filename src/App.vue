@@ -63,12 +63,19 @@ const filtered = computed(() => {
       <div class="featuredWrap">
         <FeaturedProject
           title="TransitHQ"
-          subtitle="Transit tracking and mapping prototype"
-          description="A transit-focused project exploring real-time vehicle visibility, route context, and map-based UX. Built to practice service integration, data modeling, and clean UI patterns."
-          :tags="['Mapping', 'APIs', 'Real-time UX', 'React', 'SQL', 'Cloud']"
+          subtitle="Real-time transit intelligence for San Diego MTS"
+          description="Mobile-first rider experience backed by a gateway that normalizes upstream feeds, adds caching, and lays the groundwork for reliability scoring and analytics."
+          :stack="['React + TypeScript', 'Django REST', 'Redis', 'Postgres', 'GTFS + GTFS-Realtime']"
+          architectureTitle="Architecture"
+          architectureLine="Frontend (React + TypeScript) → Backend API (Django REST) → Redis (real-time cache) + Postgres (static + history)"
+          :bullets="[
+            'Nearby stops, arrivals, live vehicles, and service alerts (MVP path)',
+            'Rate-limit friendly polling + caching to improve consistency',
+            'Foundation for headway analysis, confidence scoring, and reliability dashboards'
+          ]"
           :links="[
-            { label: 'GitHub', url: 'https://github.com/cespitia/TransitHQ' },
-            { label: 'Readme', url: 'https://github.com/cespitia/TransitHQ#readme' }
+            { label: 'GitHub Repo', url: 'https://github.com/cespitia/transit-hq' },
+            { label: 'README', url: 'https://github.com/cespitia/transit-hq#readme' }
           ]"
         />
     </div>
