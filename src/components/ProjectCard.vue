@@ -53,7 +53,6 @@ defineProps<{ project: Project }>();
 
 <style scoped>
 .card{
-  /*
   border:1px solid rgba(255,255,255,0.14);
   background: rgba(255,255,255,0.04);
   border-radius:16px;
@@ -61,7 +60,6 @@ defineProps<{ project: Project }>();
   display:flex;
   flex-direction:column;
   gap:12px;
-  */
   transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
 }
 

@@ -49,13 +49,11 @@
 }
 
 .certCard{
-  /*
   grid-column: span 6;
   border:1px solid rgba(255,255,255,0.14);
   border-radius:16px;
   padding:14px;
   background: rgba(255,255,255,0.04);
-  */
   transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
 }
 
