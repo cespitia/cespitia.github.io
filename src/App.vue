@@ -59,7 +59,7 @@ const filtered = computed(() => {
 
           <a
             class="secondary"
-            href="/resume/Christopher_Espitia_Associate_Developer_Resume.pdf"
+            href="/resume/Christopher_Espitia_Associate_Software_Developer_Resume.pdf"
             target="_blank"
             rel="noopener"
           >
