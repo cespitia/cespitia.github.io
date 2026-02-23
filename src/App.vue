@@ -29,12 +29,13 @@ const filtered = computed(() => {
       <div class="heroTop">
         <div>
           <h1 class="h1">Chris Espitia Portfolio</h1>
-          <p class="lead">
-            Focused MVPs aligned to Associate Software Developer requirements:
-            .NET/C#, MVC, APIs, EF Core, SQL Server, IIS, Azure, GitHub, and documentation.
-          </p>
+            <p class="lead">
+              Associate Software Developer with enterprise experience across Secure SDLC,
+              database-driven applications, and Microsoft .NET ecosystems. Focused on building
+              maintainable, documented, production-ready systems that balance architecture,
+              security, and long-term supportability.
+            </p>
         </div>
-
         <div class="cta">
           <a class="primary" href="https://github.com/cespitia" target="_blank" rel="noreferrer">
             GitHub
