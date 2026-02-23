@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
+import FeaturedProject from "./components/FeaturedProject.vue";
 import ProjectCard from "./components/ProjectCard.vue";
 import { projects } from "./data/projects";
 
@@ -58,6 +59,20 @@ const filtered = computed(() => {
           <option>MVP Done</option>
         </select>
       </div>
+
+      <div class="featuredWrap">
+        <FeaturedProject
+          title="TransitHQ"
+          subtitle="Transit tracking and mapping prototype"
+          description="A transit-focused project exploring real-time vehicle visibility, route context, and map-based UX. Built to practice service integration, data modeling, and clean UI patterns."
+          :tags="['Mapping', 'APIs', 'Real-time UX', 'React', 'SQL', 'Cloud']"
+          :links="[
+            { label: 'GitHub', url: 'https://github.com/cespitia/TransitHQ' },
+            { label: 'Readme', url: 'https://github.com/cespitia/TransitHQ#readme' }
+          ]"
+        />
+    </div>
+
     </header>
 
     <main class="grid">
@@ -143,6 +158,10 @@ const filtered = computed(() => {
 }
 .select{
   flex: 0 0 180px;
+}
+
+.featuredWrap{
+  margin-top: 6px;
 }
 
 .grid{
