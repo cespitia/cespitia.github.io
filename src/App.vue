@@ -110,6 +110,7 @@ const filtered = computed(() => {
           :links="[
             { label: 'GitHub Repo', url: 'https://github.com/cespitia/transit-hq' }
           ]"
+          imageUrl="/images/nearby-stops-loaded.png"
         />
       </div>
     </header>
