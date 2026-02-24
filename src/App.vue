@@ -193,8 +193,8 @@ const filtered = computed(() => {
 }
 
 .heroPhoto{
-  width:92px;
-  height:92px;
+  width:200px;
+  height:200px;
   border-radius:999px;
   overflow:hidden;
   border:1px solid rgba(255,255,255,0.18);
@@ -347,7 +347,7 @@ const filtered = computed(() => {
 
 .sep{ opacity:0.6; }
 
-.media {
+.media[data-v-940c14a1] {
   margin-top: 15px;
 }
 </style>
