@@ -39,32 +39,43 @@ const filtered = computed(() => {
     <!-- HERO -->
     <header class="hero">
       <div class="heroContent">
-        <h1 class="h1">Christopher Espitia Portfolio</h1>
+        <div class="heroTop">
+          <div class="heroPhoto">
+            <img
+              src="/images/headshot.png"
+              alt="Christopher Espitia headshot"
+            />
+          </div>
 
-        <p class="lead">
-          Associate Software Developer with enterprise experience across Secure SDLC,
-          database-driven applications, and Microsoft .NET ecosystems.
-          Focused on building maintainable, documented, production-ready systems.
-        </p>
+          <div class="heroText">
+            <h1 class="h1">Christopher Espitia Portfolio</h1>
 
-        <div class="cta">
-          <a
-            class="primary"
-            href="https://github.com/cespitia"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
+            <p class="lead">
+              Associate Software Developer with enterprise experience across Secure SDLC,
+              database-driven applications, and Microsoft .NET ecosystems.
+              Focused on building maintainable, documented, production-ready systems.
+            </p>
 
-          <a
-            class="secondary"
-            href="/resume/Christopher_Espitia_Associate_Software_Developer_Resume.pdf"
-            target="_blank"
-            rel="noopener"
-          >
-            Resume
-          </a>
+            <div class="cta">
+              <a
+                class="primary"
+                href="https://github.com/cespitia"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+
+              <a
+                class="secondary"
+                href="/resume/Christopher_Espitia_Associate_Software_Developer_Resume.pdf"
+                target="_blank"
+                rel="noopener"
+              >
+                Resume
+              </a>
+            </div>
+          </div>
         </div>
 
         <div class="heroPills">
@@ -75,7 +86,6 @@ const filtered = computed(() => {
           <span class="pill">IIS + Azure</span>
           <span class="pill">Secure SDLC</span>
         </div>
-
       </div>
 
       <!-- Search Controls -->
@@ -174,6 +184,43 @@ const filtered = computed(() => {
 
 .heroContent{
   max-width:820px;
+}
+
+.heroTop{
+  display:flex;
+  align-items:flex-start;
+  gap:18px;
+}
+
+.heroPhoto{
+  width:92px;
+  height:92px;
+  border-radius:999px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.18);
+  box-shadow:0 14px 34px rgba(0,0,0,0.28);
+  flex-shrink:0;
+}
+
+.heroPhoto img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.heroText{
+  min-width:0;
+}
+
+@media (max-width: 720px){
+  .heroTop{
+    flex-direction:column;
+  }
+  .heroPhoto{
+    width:84px;
+    height:84px;
+  }
 }
 
 .h1{
@@ -299,4 +346,8 @@ const filtered = computed(() => {
 }
 
 .sep{ opacity:0.6; }
+
+.media {
+  margin-top: 15px;
+}
 </style>
