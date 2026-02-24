@@ -190,7 +190,7 @@ defineProps<{
   min-height:170px;
 }
 
-media[data-v-940c14a1] {
+.media .img {
   margin-top: 15px;
 }
 
