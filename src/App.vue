@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, ref, onMounted } from "vue";
 
 import FeaturedProject from "./components/FeaturedProject.vue";
 import EnterpriseHighlights from "./components/EnterpriseHighlights.vue";
@@ -10,6 +10,20 @@ import Certifications from "./components/Certifications.vue";
 import SectionDivider from "./components/SectionDivider.vue";
 
 import { projects } from "./data/projects";
+
+const visits = ref<number | null>(null)
+
+onMounted(async () => {
+  try {
+    const res = await fetch(
+      'https://api.countapi.xyz/hit/cespitia-portfolio/visits'
+    )
+    const data = await res.json()
+    visits.value = data.value
+  } catch (e) {
+    console.error('Counter failed', e)
+  }
+})
 
 const query = ref("");
 const status = ref<"All" | "Planned" | "In Progress" | "MVP Done">("All");
@@ -160,6 +174,9 @@ const filtered = computed(() => {
         <span>Built with Vue + TypeScript.</span>
         <span class="sep">·</span>
         <span>Enterprise-focused .NET & cloud-oriented development.</span>
+      </div>
+      <div class="visitCounter">
+        <span>{{ visits }}</span>
       </div>
     </footer>
 
@@ -350,4 +367,12 @@ const filtered = computed(() => {
 .media[data-v-940c14a1] {
   margin-top: 15px;
 }
+
+.visitCounter{
+  margin-top:18px;
+  font-size:12px;
+  opacity:0.65;
+  text-align:center;
+}
+
 </style>

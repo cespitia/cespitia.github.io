@@ -188,9 +188,6 @@ defineProps<{
   border:1px solid rgba(255,255,255,0.14);
   background: rgba(0,0,0,0.12);
   min-height:170px;
-}
-
-.media .img {
   margin-top: 15px;
 }
 
