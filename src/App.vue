@@ -176,7 +176,9 @@ const filtered = computed(() => {
         <span>Enterprise-focused .NET & cloud-oriented development.</span>
       </div>
       <div class="visitCounter">
-        <span>{{ visits }}</span>
+     <a href='https://www.free-counters.org/'></a> 
+        <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=5934faeffe1464e09691e1ae8bd0bd860cd2fc7e'></script>
+        <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1507970/t/3"></script>
       </div>
     </footer>
 
