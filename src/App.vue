@@ -161,10 +161,8 @@ const filtered = computed(() => {
         <span class="sep">·</span>
         <span>Enterprise-focused .NET & cloud-oriented development.</span>
       </div>
-      <div class="visitCounter">
-<script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=3936528f59ebe0f7cade6e0390a662d9b9aad24a'></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1507973/t/3"></script>
-      </div>
+      <script data-goatcounter="https://ceghsc.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
     </footer>
 
   </div>
@@ -353,13 +351,6 @@ const filtered = computed(() => {
 
 .media[data-v-940c14a1] {
   margin-top: 15px;
-}
-
-.visitCounter{
-  margin-top:18px;
-  font-size:12px;
-  opacity:0.65;
-  text-align:center;
 }
 
 </style>
