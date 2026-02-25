@@ -162,7 +162,7 @@ const filtered = computed(() => {
         <span>Enterprise-focused .NET & cloud-oriented development.</span>
       </div>
       <div class="visitCounter">
- <a href='https://www.free-counters.org/'>free HitCounter</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=3936528f59ebe0f7cade6e0390a662d9b9aad24a'></script>
+<script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=3936528f59ebe0f7cade6e0390a662d9b9aad24a'></script>
 <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1507973/t/3"></script>
       </div>
     </footer>
