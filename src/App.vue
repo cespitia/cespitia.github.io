@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, onMounted } from "vue";
+import { computed, ref } from "vue";
 
 import FeaturedProject from "./components/FeaturedProject.vue";
 import EnterpriseHighlights from "./components/EnterpriseHighlights.vue";
@@ -10,20 +10,6 @@ import Certifications from "./components/Certifications.vue";
 import SectionDivider from "./components/SectionDivider.vue";
 
 import { projects } from "./data/projects";
-
-const visits = ref<number | null>(null)
-
-onMounted(async () => {
-  try {
-    const res = await fetch(
-      'https://api.countapi.xyz/hit/cespitia-portfolio/visits'
-    )
-    const data = await res.json()
-    visits.value = data.value
-  } catch (e) {
-    console.error('Counter failed', e)
-  }
-})
 
 const query = ref("");
 const status = ref<"All" | "Planned" | "In Progress" | "MVP Done">("All");
@@ -176,9 +162,8 @@ const filtered = computed(() => {
         <span>Enterprise-focused .NET & cloud-oriented development.</span>
       </div>
       <div class="visitCounter">
-     <a href='https://www.free-counters.org/'></a> 
-        <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=5934faeffe1464e09691e1ae8bd0bd860cd2fc7e'></script>
-        <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1507970/t/3"></script>
+ <a href='https://www.free-counters.org/'>free HitCounter</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=3936528f59ebe0f7cade6e0390a662d9b9aad24a'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1507973/t/3"></script>
       </div>
     </footer>
 
