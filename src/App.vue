@@ -161,8 +161,6 @@ const filtered = computed(() => {
         <span class="sep">·</span>
         <span>Enterprise-focused .NET & cloud-oriented development.</span>
       </div>
-      <script data-goatcounter="https://ceghsc.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
     </footer>
 
   </div>
